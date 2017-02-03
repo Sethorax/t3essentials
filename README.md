@@ -20,7 +20,7 @@ This extension adds the following features:
 Every feature is configurable by typoscript.  
 If a feature is not needed, it can be easily disabled via typoscript.
 
-You can find detailed information about the typoscript settings in the [Wiki](Wiki).
+You can find detailed information about the typoscript settings in the [Wiki](../../wiki).
 
 #### Dependencies
 - Typo3 7.6.X
