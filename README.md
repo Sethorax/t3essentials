@@ -20,6 +20,8 @@ This extension adds the following features:
 Every feature is configurable by typoscript.  
 If a feature is not needed, it can be easily disabled via typoscript.
 
+You can find detailed information about the typoscript settings in the [Wiki](Wiki).
+
 #### Dependencies
 - Typo3 7.6.X
 - PHP 5.5 - 7.0
