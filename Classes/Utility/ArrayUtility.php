@@ -4,12 +4,14 @@ namespace Sethorax\T3essentials\Utility;
 
 class ArrayUtility {
     public static function mergeArrays($target, $source, $isAssoc = false) {
-        if ($isAssoc) {
-            foreach ($source as $array) {
-                $target = array_merge($target, $array);
+        if (is_array($source)) {
+            if ($isAssoc) {
+                foreach ($source as $array) {
+                    $target = array_merge($target, $array);
+                }
+            } else {
+                $target = array_merge($target, $source);
             }
-        } else {
-            $target = array_merge($target, $source);
         }
 
         return $target;
