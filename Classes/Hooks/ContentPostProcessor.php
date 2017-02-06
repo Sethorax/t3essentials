@@ -54,11 +54,15 @@ class ContentPostProcessor {
 
 
     private function sortHeadTags() {
-        $sorter = new HtmlTagSorter($this->params['pObj']->content);
-        $sorter->setTargetNode('head')
-            ->sort();
+        $content = $this->params['pObj']->content;
 
-        $this->params['pObj']->content = $sorter->getHtml();
+        if (strpos($content, '<!DOCTYPE') !== false) {
+            $sorter = new HtmlTagSorter($content);
+            $sorter->setTargetNode('head')
+                ->sort();
+
+            $this->params['pObj']->content = $sorter->getHtml();
+        }
     }
 
     private function minifyHtml() {
