@@ -45,7 +45,9 @@ class RenderPostProcessor {
             $this->params = $params;
             $this->settings = TyposcriptLoader::getSetup('t3essentials', false);
 
-            $this->checkTyposcriptSettings();
+            if (is_array($this->settings)) {
+                $this->checkTyposcriptSettings();
+            }
 
             return $this->params;
         } else {

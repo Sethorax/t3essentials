@@ -45,8 +45,10 @@ class TyposcriptLoader {
     private static function removeDotsFromKeys($settings) {
         $conf = [];
 
-        foreach ($settings as $key => $value) {
-            $conf[self::removeDotFromString($key)] = is_array($value) ? self::removeDotsFromKeys($value) : $value;
+        if (is_array($settings)) {
+            foreach ($settings as $key => $value) {
+                $conf[self::removeDotFromString($key)] = is_array($value) ? self::removeDotsFromKeys($value) : $value;
+            }
         }
 
         return $conf;
