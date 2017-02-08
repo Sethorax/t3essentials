@@ -21,7 +21,7 @@ class HtmlTagSorter {
 
     public function setTargetNode($nodeName) {
         if ($this->doc !== null) {
-            $this->targetNode = $this->doc->getElementsByTagName($nodeName)[0];
+            $this->targetNode = $this->doc->getElementsByTagName($nodeName)->item(0);
         }
 
         return $this;
