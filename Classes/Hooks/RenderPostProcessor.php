@@ -201,8 +201,10 @@ class RenderPostProcessor {
             }
         }
 
-        foreach (array_unique($urls) as $url) {
-            $this->addDnsPrefetchLink($url);
+        if (is_array($urls)) {
+            foreach (array_unique($urls) as $url) {
+                $this->addDnsPrefetchLink($url);
+            }
         }
     }
 
