@@ -1,5 +1,9 @@
 # TYPO3 Extension - ``t3essentials``
 
+## DEPRECATED
+**This project is deprecated and no longer maintained!  
+The asset loading functionality was remade in my [`typo3-assetloader`](https://github.com/Sethorax/typo3-assetloader) extension.**
+
 #### Introduction
 This extension adds quality of life and performance improvements to TYPO3.  
 
